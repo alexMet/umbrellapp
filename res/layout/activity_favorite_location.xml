@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_favorite_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/holyGreen"
+    tools:context="com.example.root.umbrellapp.FavoriteLocationActivity">
+
+    <ImageView
+        android:id="@+id/x"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_vector_x_purple"/>
+
+    <TextView
+        android:id="@+id/favoritesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/x"
+        android:text="@string/fav_locations"
+        android:textColor="@color/holyPurple"
+        android:textSize="@dimen/text_view_size"/>
+
+    <EditText
+        android:id="@+id/typeFavorite"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@id/favoritesText"
+        android:hint="@string/fav_edit"
+        android:textColorHint="@color/holyPurple"
+        android:textColorHighlight="@color/holyGreenDark"
+        android:textColor="@color/holyPurple"
+        android:textSize="@dimen/text_view_size"
+        android:background="@drawable/ic_edit_text_border"/>
+
+    <ListView
+        android:id="@+id/favList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/typeFavorite"
+        android:drawSelectorOnTop="true"
+        android:dividerHeight="15dp"
+        android:divider="@color/holyGreen"
+        android:footerDividersEnabled="false"
+        android:scrollbarStyle="outsideOverlay"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</RelativeLayout>

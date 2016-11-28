@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">umbrellapp</string>
+    <string name="holy_logo">ø</string>
+
+    <!-- Type location -->
+    <string name="ins_type">type your location:</string>
+    <string name="ins_edit">type here..</string>
+    <string name="ins_give">or give us your location</string>
+    <string name="ins_gps">access location</string>
+
+    <!-- Favorite location -->
+    <string name="fav_locations">Your favorite locations</string>
+    <string name="fav_edit">add a city</string>
+    <string name="fav_undo">You deleted a favorite you can undo this action</string>
+
+    <!-- Single location -->
+    <string name="single_today">TODAY</string>
+
+    <!-- Other strings -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Activity Labels -->
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_favorite_location">FavoriteLocationActivity</string>
+    <string name="title_activity_single_location">SingleLocationActivity</string>
+</resources>

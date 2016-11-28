@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Purple screen theme. -->
+    <style name="PurpleScreen" parent="MyNoActionBar">
+        <item name="colorPrimary">@color/holyPurple</item>
+        <item name="colorPrimaryDark">@color/holyPurpleDark</item>
+    </style>
+
+    <!-- Somon screen theme. -->
+    <style name="SomonScreen" parent="MyNoActionBar">
+        <item name="colorPrimary">@color/holySomon</item>
+        <item name="colorPrimaryDark">@color/holySomonDark</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <!-- Green screen theme. -->
+    <style name="GreenScreen" parent="MyNoActionBar">
+        <item name="colorPrimary">@color/holyGreen</item>
+        <item name="colorPrimaryDark">@color/holyGreenDark</item>
+        <item name="colorControlActivated">@color/holyPurple</item>
+    </style>
+
+    <!-- Splash screen theme -->
+    <style name="SplashTheme" parent="MyNoActionBar">
+        <item name="colorPrimaryDark">@color/holySomonDark</item>
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+
+    <!-- Parent for the above styles -->
+    <style name="MyNoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

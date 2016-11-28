@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="holySomon">#FF7070</color>
+    <color name="holySomonDark">#E56464</color>
+
+    <color name="holyPurple">#A970FF</color>
+    <color name="holyPurpleDark">#9864E5</color>
+
+    <color name="holyGreen">#6EFC8E</color>
+    <color name="holyGreenDark">#63E27F</color>
+
+    <color name="holyBrown">#8B3D3D</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
+
