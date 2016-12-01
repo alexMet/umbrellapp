@@ -13,12 +13,18 @@
     android:background="@color/holySomon"
     tools:context="com.example.root.umbrellapp.SplashActivity">
 
+    <View
+        android:id="@+id/nothing"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_centerInParent="true"/>
+
     <TextView
         android:id="@+id/umbrellaText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/nothing"
         android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:text="@string/app_name"/>
@@ -27,18 +33,16 @@
         android:id="@+id/umbrellaIcon"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_above="@id/umbrellaText"
+        android:layout_above="@id/nothing"
         android:layout_centerHorizontal="true"
-        android:padding="10dp"
+        android:padding="20dp"
         android:src="@drawable/ic_vector_umbrella_somon_dark"/>
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:text="@string/holy_logo"/>
+        android:src="@drawable/ic_vector_holy_logo"/>
 </RelativeLayout>

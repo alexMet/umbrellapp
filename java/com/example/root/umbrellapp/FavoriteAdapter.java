@@ -3,6 +3,7 @@ package com.example.root.umbrellapp;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,12 +21,13 @@ public class FavoriteAdapter extends BaseAdapter {
         mContext = context;
     }
 
-    public ArrayList<String> getList() {
-        return mItems;
-    }
-
     public void add(String item) {
         mItems.add(item);
+        notifyDataSetChanged();
+    }
+
+    public void remove(int pos) {
+        mItems.remove(pos);
         notifyDataSetChanged();
     }
 
@@ -57,7 +59,7 @@ public class FavoriteAdapter extends BaseAdapter {
 
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         final String locationText = (String) getItem(position);
         int deleteIcon, textColor, linearColor;
         View vi = convertView;
@@ -88,6 +90,8 @@ public class FavoriteAdapter extends BaseAdapter {
         holder.linear.setBackgroundResource(linearColor);
 
         holder.location.setText(locationText);
+        Typeface font = Typeface.createFromAsset(mContext.getAssets(), "Biko_Regular.otf");
+        holder.location.setTypeface(font);
         holder.location.setTextColor(mContext.getResources().getColor(textColor));
 
         holder.delete.setImageResource(deleteIcon);
@@ -95,7 +99,10 @@ public class FavoriteAdapter extends BaseAdapter {
 
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "deletation", Toast.LENGTH_SHORT).show();
+                DBHandler db = new DBHandler(mContext);
+                db.deleteFavorite(locationText);
+                remove(position);
+                Toast.makeText(mContext, R.string.fav_deleted, Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -8,5 +8,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
-    <dimen name="text_view_size">18sp</dimen>
+    <dimen name="text_view_size">20sp</dimen>
+    <dimen name="next_day_size">15sp</dimen>
+
 </resources>
