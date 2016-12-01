@@ -9,14 +9,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/holyGreen"
-    tools:context="com.example.root.umbrellapp.FavoriteLocationActivity">
+    android:background="@color/holyGreen">
 
     <ImageView
         android:id="@+id/x"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="15dp"
         android:src="@drawable/ic_vector_x_purple"/>
 
     <TextView
@@ -28,20 +27,19 @@
         android:textColor="@color/holyPurple"
         android:textSize="@dimen/text_view_size"/>
 
-    <EditText
+    <Button
         android:id="@+id/typeFavorite"
-        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:layout_below="@id/favoritesText"
-        android:hint="@string/fav_edit"
-        android:textColorHint="@color/holyPurple"
-        android:textColorHighlight="@color/holyGreenDark"
+        android:text="@string/fav_edit"
         android:textColor="@color/holyPurple"
         android:textSize="@dimen/text_view_size"
+        android:gravity="start"
+        android:textAllCaps="false"
         android:background="@drawable/ic_edit_text_border"/>
 
     <ListView
