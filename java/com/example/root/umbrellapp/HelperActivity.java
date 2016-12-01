@@ -8,6 +8,7 @@ import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.provider.CalendarContract;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.ViewDragHelper;
@@ -100,7 +101,8 @@ public class HelperActivity extends Activity {
                 }
             });
 
-            adapter = new FavoriteAdapter(getApplicationContext());
+            CoordinatorLayout coord = (CoordinatorLayout) findViewById(R.id.coordLayout);
+            adapter = new FavoriteAdapter(getApplicationContext(), coord);
             db.getAllFavs(adapter);
             ListView list = (ListView)findViewById(R.id.favList);
             list.setFooterDividersEnabled(true);

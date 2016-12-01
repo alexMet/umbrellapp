@@ -3,7 +3,10 @@ package com.example.root.umbrellapp;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +19,14 @@ import android.widget.Toast;
 public class FavoriteAdapter extends BaseAdapter {
     public final ArrayList<String> mItems = new ArrayList<String>();
     private final Context mContext;
+    private Favorite undoFav;
+    private DBHandler db;
+    private CoordinatorLayout mCoord;
 
-    public FavoriteAdapter(Context context) {
+    public FavoriteAdapter(Context context, CoordinatorLayout coord) {
         mContext = context;
+        mCoord = coord;
+        db = new DBHandler(context);
     }
 
     public void add(String item) {
@@ -99,10 +107,20 @@ public class FavoriteAdapter extends BaseAdapter {
 
             @Override
             public void onClick(View v) {
-                DBHandler db = new DBHandler(mContext);
+                undoFav = db.getFavorite(locationText);
                 db.deleteFavorite(locationText);
                 remove(position);
-                Toast.makeText(mContext, R.string.fav_deleted, Toast.LENGTH_SHORT).show();
+
+                Snackbar sna = Snackbar.make(mCoord, "", Snackbar.LENGTH_INDEFINITE);
+                sna.getView().setBackgroundColor(mContext.getResources().getColor(R.color.holySomon));
+                ((TextView) sna.getView().findViewById(android.support.design.R.id.snackbar_action)).setTextColor(Color.WHITE);
+                sna.setAction(R.string.fav_undo, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        db.addFavorite(undoFav.getName(), "", undoFav.getDate(), undoFav.getMax(), undoFav.getMin(), undoFav.getIcon());
+                        add(undoFav.getName());
+                    }
+                }).show();
             }
         });
 
