@@ -64,6 +64,7 @@ public class SingleLocationActivity extends HelperActivity {
                 icons = fav.getIcon();
                 maxTemps = fav.getMax();
                 minTemps = fav.getMin();
+                setLayouts();
             } else
                 startWeatherTask("q=" + name.replace(" ", "%20"));
         }
@@ -72,8 +73,11 @@ public class SingleLocationActivity extends HelperActivity {
             icons = inte.getStringArrayExtra("icons");
             maxTemps = inte.getStringArrayExtra("maxTemps");
             minTemps = inte.getStringArrayExtra("minTemps");
+            setLayouts();
         }
+    }
 
+    private void setLayouts() {
         townText = (TextView) findViewById(R.id.townText);
         wheatherIcon = (ImageView) findViewById(R.id.wheatherIcon);
         maxTemp = (TextView) findViewById(R.id.maxTemp);
@@ -100,11 +104,7 @@ public class SingleLocationActivity extends HelperActivity {
                     Toast.makeText(getApplicationContext(), R.string.fav_added_already, Toast.LENGTH_SHORT).show();
             }
         });
-
-        setLayouts();
-    }
-
-    private void setLayouts() {
+        
         // Set the info for today
         townText.setText(townName);
         wheatherIcon.setImageResource(getDrawableByName(icons[0]));
@@ -179,7 +179,7 @@ public class SingleLocationActivity extends HelperActivity {
             @Override
             public void onResponseReceived(int error, String townName, String[] micons, String[] mmaxTemps, String[] mminTemps) {
                 if (error > 0) {
-                    Toast.makeText(getApplicationContext(), R.string.oups_fail, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.no_internet, Toast.LENGTH_LONG).show();
                     finish();
                 }
                 else {
