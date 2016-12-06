@@ -16,7 +16,7 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginBottom="15dp"
-        android:src="@drawable/ic_vector_x_purple"/>
+        app:srcCompat="@drawable/ic_vector_x_purple"/>
 
     <TextView
         android:id="@+id/favoritesText"

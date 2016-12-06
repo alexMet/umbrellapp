@@ -35,14 +35,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
-                    android:src="@drawable/ic_vector_menu_green"/>
+                    app:srcCompat="@drawable/ic_vector_menu_green"/>
 
                 <ImageView
                     android:id="@+id/umbrella"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/ic_vector_umbrella_white"/>
+                    app:srcCompat="@drawable/ic_vector_umbrella_white"/>
 
                 <ImageView
                     android:id="@+id/heart"
@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_vector_heart_white"/>
+                    app:srcCompat="@drawable/ic_vector_heart_white"/>
             </RelativeLayout>
 
             <TextView
@@ -99,7 +99,9 @@
                 android:layout_centerHorizontal="true"
                 android:textColor="@color/holyGreenDark"
                 android:textSize="30sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_alignEnd="@id/maxTemp"
+                android:layout_alignRight="@id/maxTemp"/>
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
@@ -112,7 +114,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -122,7 +124,7 @@
                             android:id="@+id/nextDay1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
                             android:textColor="@color/white"
                             android:textSize="@dimen/next_day_size"/>
 
@@ -131,13 +133,15 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center_horizontal"
+                            android:layout_below="@id/nextDay1"
                             android:padding="10dp"/>
 
                         <TextView
                             android:id="@+id/nextMaxTemp1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/nextIcon1"
                             android:textColor="@color/holyGreen"
                             android:textSize="@dimen/next_day_size"
                             android:textStyle="bold"/>
@@ -147,13 +151,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/nextMaxTemp1"
                             android:textColor="@color/holyGreenDark"
                             android:textSize="@dimen/next_day_size"
-                            android:textStyle="bold"/>
-                    </LinearLayout>
+                            android:textStyle="bold"
+                            android:layout_alignEnd="@id/nextMaxTemp1"
+                            android:layout_alignRight="@id/nextMaxTemp1"/>
+                    </RelativeLayout>
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -163,7 +170,7 @@
                             android:id="@+id/nextDay2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
                             android:textColor="@color/white"
                             android:textSize="@dimen/next_day_size"/>
 
@@ -172,13 +179,15 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center_horizontal"
+                            android:layout_below="@id/nextDay2"
                             android:padding="10dp"/>
 
                         <TextView
                             android:id="@+id/nextMaxTemp2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/nextIcon2"
                             android:textColor="@color/holyGreen"
                             android:textSize="@dimen/next_day_size"
                             android:textStyle="bold"/>
@@ -188,13 +197,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/nextMaxTemp2"
                             android:textColor="@color/holyGreenDark"
                             android:textSize="@dimen/next_day_size"
-                            android:textStyle="bold"/>
-                    </LinearLayout>
+                            android:textStyle="bold"
+                            android:layout_alignEnd="@id/nextMaxTemp2"
+                            android:layout_alignRight="@id/nextMaxTemp2"/>
+                    </RelativeLayout>
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -204,7 +216,7 @@
                             android:id="@+id/nextDay3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
                             android:textColor="@color/white"
                             android:textSize="@dimen/next_day_size"/>
 
@@ -213,13 +225,15 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center_horizontal"
+                            android:layout_below="@id/nextDay3"
                             android:padding="10dp"/>
 
                         <TextView
                             android:id="@+id/nextMaxTemp3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/nextIcon3"
                             android:textColor="@color/holyGreen"
                             android:textSize="@dimen/next_day_size"
                             android:textStyle="bold"/>
@@ -229,13 +243,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/nextMaxTemp3"
                             android:textColor="@color/holyGreenDark"
                             android:textSize="@dimen/next_day_size"
-                            android:textStyle="bold"/>
-                    </LinearLayout>
+                            android:textStyle="bold"
+                            android:layout_alignEnd="@id/nextMaxTemp3"
+                            android:layout_alignRight="@id/nextMaxTemp3"/>
+                    </RelativeLayout>
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -245,7 +262,7 @@
                             android:id="@+id/nextDay4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
                             android:textColor="@color/white"
                             android:textSize="@dimen/next_day_size"/>
 
@@ -254,13 +271,15 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center_horizontal"
+                            android:layout_below="@id/nextDay4"
                             android:padding="10dp"/>
 
                         <TextView
                             android:id="@+id/nextMaxTemp4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/nextIcon4"
                             android:textColor="@color/holyGreen"
                             android:textSize="@dimen/next_day_size"
                             android:textStyle="bold"/>
@@ -270,13 +289,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/nextMaxTemp4"
                             android:textColor="@color/holyGreenDark"
                             android:textSize="@dimen/next_day_size"
-                            android:textStyle="bold"/>
-                    </LinearLayout>
+                            android:textStyle="bold"
+                            android:layout_alignEnd="@id/nextMaxTemp4"
+                            android:layout_alignRight="@id/nextMaxTemp4"/>
+                    </RelativeLayout>
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -286,7 +308,7 @@
                             android:id="@+id/nextDay5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
                             android:textColor="@color/white"
                             android:textSize="@dimen/next_day_size"/>
 
@@ -295,13 +317,15 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center_horizontal"
+                            android:layout_below="@id/nextDay5"
                             android:padding="10dp"/>
 
                         <TextView
                             android:id="@+id/nextMaxTemp5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/nextIcon5"
                             android:textColor="@color/holyGreen"
                             android:textSize="@dimen/next_day_size"
                             android:textStyle="bold"/>
@@ -311,11 +335,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/nextMaxTemp5"
                             android:textColor="@color/holyGreenDark"
                             android:textSize="@dimen/next_day_size"
-                            android:textStyle="bold"/>
-                    </LinearLayout>
+                            android:textStyle="bold"
+                            android:layout_alignEnd="@id/nextMaxTemp5"
+                            android:layout_alignRight="@id/nextMaxTemp5"/>
+                    </RelativeLayout>
                 </LinearLayout>
             </HorizontalScrollView>
         </RelativeLayout>
