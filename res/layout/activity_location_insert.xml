@@ -35,14 +35,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
-                    android:src="@drawable/ic_vector_menu_somon_dark"/>
+                    app:srcCompat="@drawable/ic_vector_menu_somon_dark"/>
 
                 <ImageView
                     android:id="@+id/umbrella"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/ic_vector_umbrella_somon_dark"/>
+                    app:srcCompat="@drawable/ic_vector_umbrella_somon_dark"/>
             </RelativeLayout>
 
             <TextView
