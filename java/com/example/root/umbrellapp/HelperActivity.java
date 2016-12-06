@@ -13,6 +13,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.ViewDragHelper;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -35,7 +36,7 @@ import java.util.Calendar;
  *  Parent class that extends activity and is responsible for setting up the drawer
  *  Also stores globaly used functions
  */
-public class HelperActivity extends Activity {
+public class HelperActivity extends AppCompatActivity {
     public static int timeoutTime = 10000;
     private DBHandler db;
     private FavoriteAdapter adapter;
