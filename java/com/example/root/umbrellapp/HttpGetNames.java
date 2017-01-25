@@ -25,7 +25,8 @@ public abstract class HttpGetNames extends AsyncTask<String, Void, Integer> impl
     protected Integer doInBackground(String... input) {
         final String TAG = input[0];
         String data = "";
-        String serverN = "http://api.openweathermap.org/data/2.5/find?mode=json&appid=cb89a2d010e5f7e225c403c1f7b1335f&type=like&cnt=10&";
+        String serverN = "http://api.openweathermap.org/data/2.5/find?mode=json&appid="
+                + BuildConfig.OPEN_WEATHER_API_KEY +"&type=like&cnt=10&";
         int error = -1, result = 0;
         java.net.URL url;
         HttpURLConnection conn = null;

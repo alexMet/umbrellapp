@@ -2,6 +2,7 @@ package com.example.root.umbrellapp;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -27,7 +28,8 @@ public abstract class HttpGetWheather extends AsyncTask<String, Void, Integer> i
     protected Integer doInBackground(String... input) {
         final String TAG = input[0];
         String data = "";
-        String server = "http://api.openweathermap.org/data/2.5/forecast/daily?mode=json&appid=cb89a2d010e5f7e225c403c1f7b1335f&units=metric&cnt=6&";
+        String server = "http://api.openweathermap.org/data/2.5/forecast/daily?mode=json&appid="
+                + BuildConfig.OPEN_WEATHER_API_KEY + "&units=metric&cnt=6&";
         int error = -1, result = 0;
         java.net.URL url;
         HttpURLConnection conn = null;
